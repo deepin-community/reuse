@@ -1,0 +1,3 @@
+Tests: selflint
+Depends: @
+Restrictions: allow-stderr
