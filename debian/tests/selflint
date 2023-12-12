@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+# copy source for write permissions
+cp -R . $AUTOPKGTEST_TMP
+cd $AUTOPKGTEST_TMP
+
+# remove non-upstream folders
+rm -rf debian .pc
+
+# lint and return
+reuse lint
+return $?
